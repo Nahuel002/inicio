@@ -1,0 +1,139 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: action_saludar 
+
+- story: consulta categoria
+  steps:
+    - intent: consultar_categoria
+    - action: action_consultar_categoria
+    - intent: añadir_al_carrito
+    - action: action_añadir_al_carrito
+
+- story: cerrar compra
+  steps:
+    - intent: mostrar_total
+    - action: action_mostrar_total
+    - intent: finalizar_compra
+    - action: action_finalizar_compra
+
+- story: recomendacion
+  steps:
+    - intent: recomendar
+    - action: action_recomendar
+    - intent: recomendacion_negativa
+    - action: action_no_gusto
+    
+- story: consulta producto
+  steps:
+    - intent: consultar_producto
+    - action: action_consultar_producto
+    - intent: añadir_al_carrito
+    - action: action_añadir_al_carrito
+    - intent: mostrar_carrito
+    - action: action_mostrar_carrito
+    - action: action_listen
+
+
+- story: saludo
+  steps:
+    - intent: greet
+    - action: action_saludar 
+    - intent: ver_descuentos
+    - action: action_descuentos_aleatorio
+
+- story: mostrar carrito
+  steps:
+    - intent: mostrar_carrito
+    - action: action_mostrar_carrito
+    - action: action_listen
+    - intent: añadir_al_carrito
+    - action: action_añadir_al_carrito
+    - intent: agradecimiento
+    - action: utter_agradecer
+
+- story: ver descuentos
+  steps:
+    - intent: ver_descuentos
+    - action: action_descuentos_aleatorio
+    - intent: añadir_al_carrito
+    - action: action_añadir_al_carrito
+    - intent: mostrar_carrito
+    - action: action_mostrar_carrito
+    - action: action_listen
+
+- story: mostrar carrito
+  steps:
+    - intent: mostrar_carrito
+    - action: action_mostrar_carrito
+    - intent: agradecimiento
+    - action: utter_agradecer
+
+- story: iniciar conversacion
+  steps:
+    - intent: session_start
+    - action: action_session_start
+  
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: action_saludar
+  - intent: ver_descuentos
+  - action: action_descuentos_aleatorio
+  - intent: añadir_al_carrito
+  - action: action_añadir_al_carrito
+  - intent: mostrar_carrito
+  - intent: mostrar_carrito
+  - action: action_mostrar_carrito
+  - intent: consultar_producto
+  - action: action_consultar_producto
+  - intent: mostrar_carrito
+  - action: action_mostrar_carrito
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: action_saludar
+  - intent: ver_descuentos
+  - action: action_descuentos_aleatorio
+  - slot_was_set:
+    - consult_list:
+      - '[2954];0.15'
+      - '[2955];0.15'
+      - '[2956];0.15'
+      - '[2957];0.15'
+  - slot_was_set:
+    - descuentos_cat_slot:
+      - Limpieza Pisos y Grandes Superficie
+  - intent: añadir_al_carrito
+    entities:
+    - posicion: segundo
+    - posicion: segundo
+  - action: action_añadir_al_carrito
+  - slot_was_set:
+    - shopping_list:
+      - '[2955];0.15'
+  - intent: mostrar_carrito
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: action_saludar
+  - intent: ver_descuentos
+  - action: action_descuentos_aleatorio
+  - intent: añadir_al_carrito
+  - action: action_añadir_al_carrito
+  - intent: mostrar_carrito
+  - intent: mostrar_carrito
+  - action: action_mostrar_carrito
+  - intent: consultar_producto
+  - action: action_consultar_producto
+  - intent: añadir_al_carrito
+  - action: action_añadir_al_carrito
+  - intent: mostrar_carrito
+  - action: action_mostrar_carrito

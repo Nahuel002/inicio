@@ -1,0 +1,14 @@
+[
+  {
+    "name": "producto",
+    "pattern": "(\\baceite\\b|\\bcomún\\b|\\bharina\\b|\\blata\\b|\\blatte\\b|\\bleche\\b|\\bmaicena\\b|\\bnegra\\b|\\bpan\\b|\\bpremezcla\\b|\\bqueso\\b|\\brebozador\\b|\\broja\\b|\\brubia\\b)"
+  },
+  {
+    "name": "marca",
+    "pattern": "(\\bbaggio\\b|\\bcindor\\b|\\bfantoche\\ like\\b|\\bilolay\\b|\\bla\\ serenisima\\b|\\bdescremada\\b|\\bmanfrey\\b|\\bvital\\b|\\blopez\\ blend\\b|\\bla\\ paulina\\b|\\bblancaflor\\b|\\bcañuelas\\b|\\bchacabuco\\b|\\bfavorita\\b|\\blimay\\b|\\bmaizena\\b|\\bbimbo\\b|\\boroweat\\b|\\bexquisita\\b|\\bpureza\\b|\\blucchetti\\b|\\bmama\\ cocina\\b|\\bprestopronta\\b|\\belio\\b|\\bandes\\b|\\bcorona\\b|\\bheineken\\b|\\bimperial\\b|\\bschneider\\b|\\bstella\\ artois\\b|\\blopez\\b)"
+  },
+  {
+    "name": "categoria",
+    "pattern": "(\\baceite\\b|\\blacteos\\b|\\bharina\\b|\\bpanificados\\b|\\bcerveza\\b)"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-categoria",
+      "2": "I-categoria",
+      "3": "L-categoria",
+      "4": "U-categoria",
+      "5": "B-posicion",
+      "6": "I-posicion",
+      "7": "L-posicion",
+      "8": "U-posicion",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-categoria": 1,
+      "I-categoria": 2,
+      "L-categoria": 3,
+      "U-categoria": 4,
+      "B-posicion": 5,
+      "I-posicion": 6,
+      "L-posicion": 7,
+      "U-posicion": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

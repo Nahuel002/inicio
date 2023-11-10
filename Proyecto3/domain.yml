@@ -1,0 +1,91 @@
+version: '3.1'
+
+intents:
+- affirm
+- añadir_al_carrito
+- bot_challenge
+- consultar_categoria
+- consultar_producto
+- deny
+- goodbye
+- greet
+- mostrar_carrito
+- session_start
+- ver_descuentos
+- agradecimiento
+- recomendar
+- recomendacion_negativa
+- finalizar_compra
+- mostrar_total
+slots:
+  consult_list:
+    type: list
+    initial_value: []
+    mappings:
+    - type: custom
+  descuentos_cat_slot:
+    type: list
+    initial_value: []
+    mappings:
+    - type: custom
+  shopping_list:
+    type: list
+    initial_value: []
+    mappings:
+    - type: custom
+  marca_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: marca
+  categoria_slot:
+    type: categorical
+    mappings:
+    - type: from_entity
+      entity: categoria
+  producto_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: producto
+  producto_recomendado:
+    type: text
+    mappings:
+    - type: custom
+  precio_total_slot:
+    type: float
+    initial_value: 0
+    mappings:
+    - type: custom
+entities:
+- posicion
+- producto
+- marca
+- categoria
+- prod_carrito
+actions:
+- action_añadir_al_carrito
+- action_descuentos_aleatorio
+- action_mostrar_carrito
+- action_consultar_producto
+- action_saludar
+- action_consultar_categoria
+- action_session_start
+- action_no_gusto
+- action_mostrar_total
+- action_finalizar_compra
+- action_recomendar
+responses:
+  utter_greet:
+  - text: ¡Hola! ¿Cómo estás?
+  utter_goodbye:
+  - text: Adios
+  utter_iamabot:
+  - text: Soy un bot, impulsado por Rasa.
+  utter_prolog_response:
+  - text: 'Encontré información sobre {producto}: {results}'
+  utter_agradecer:
+  - text: 'No es nada. Estoy para lo que necesites!'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-categoria",
+      "2": "I-categoria",
+      "3": "L-categoria",
+      "4": "U-categoria",
+      "5": "B-marca",
+      "6": "I-marca",
+      "7": "L-marca",
+      "8": "U-marca",
+      "9": "B-producto",
+      "10": "I-producto",
+      "11": "L-producto",
+      "12": "U-producto",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-categoria": 1,
+      "I-categoria": 2,
+      "L-categoria": 3,
+      "U-categoria": 4,
+      "B-marca": 5,
+      "I-marca": 6,
+      "L-marca": 7,
+      "U-marca": 8,
+      "B-producto": 9,
+      "I-producto": 10,
+      "L-producto": 11,
+      "U-producto": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

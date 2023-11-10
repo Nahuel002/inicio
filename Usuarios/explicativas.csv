@@ -1,0 +1,8 @@
+marca_Cocinero,marca_Don Vicente,marca_Frizze,marca_Lucchetti,marca_Ruca Malen,marca_Uvita,categoria_Bebidas,subcategoria_Conservas,subcategoria_Espumantes,subcategoria_Pastas Secas,subcategoria_Vinos
+False,True,False,False,False,False,False,False,False,True,False
+False,False,False,True,False,False,False,False,False,True,False
+False,False,False,False,False,False,False,True,False,False,False
+True,False,False,False,False,False,False,False,False,False,False
+False,False,False,False,True,False,True,False,False,False,True
+False,False,False,False,False,True,True,False,False,False,True
+False,False,True,False,False,False,True,False,True,False,False

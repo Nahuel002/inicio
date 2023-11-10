@@ -1,0 +1,315 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hola
+    - buenas
+    - buenas tardes
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - adios
+    - chau
+    - hasta luego
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - si
+    - de acuerdo
+- intent: agradecimiento
+  examples: |
+    - Gracias
+    - Muchas gracias!
+    - Te agradezco
+- intent: recomendar
+  examples: |
+    - Recomendame algo
+    - Que producto me recomendas?
+    - Estoy buscando un producto
+- intent: recomendacion_negativa
+  examples: |
+    - no me gustó el producto fideos con arroz.
+    - El producto crema de leche no me gustó.
+    - no quiero que me agregues leche la serenisima.
+    - no me gusta el vino tinto.
+- intent: finalizar_compra
+  examples: |
+    - Quiero comprar todo lo añadido.
+    - Finalizar la compra.
+    - Si.
+    - Efectuar compra.
+    - Dalo por cerrado.
+
+- intent: mostrar_total
+  examples: |
+    - Me podrías dar la suma total?
+    - Cuanto cuesta todo lo que pedí?
+    - Cuanto debo de pagar?
+    - Cual es mi monto?
+    - me das el precio?
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: consultar_producto
+  examples: |
+    - Quiero comprar una leche la serenisima de 1L
+    - Me gustaría conseguir cerveza sol, una coca y mayonesa.
+    - Buscame queso la paulina, dos vinos y una naranja.
+    - Quiero comprar el prducoto masitas Bagley.
+    - Necesito algunos productos de cuidado personal.
+    - Dame opciones de alimentos para bebé.
+    - Quiero azucar
+    - comprar leche
+    - quiero comprar leche
+- intent: consultar_categoria
+  examples: |
+    - Mostrar productos de la categoría [Bebidas](categoria)
+    - Que productos tenes en la categoría de [Frescos](categoria)?
+    - Tenes productos que sean [Leches](categoria)?
+    - Listar las categorias de [Limpieza Hogar](categoria)
+    - ¿Qué productos de [electrodomesticos] tienen disponibles?
+    - Busco productos para [Cuidado e Higiene].
+    - Qué productos hay disponibles?
+- intent: añadir_al_carrito
+  examples: |
+    - quiero el [primer](posicion) producto
+    - dame el [segundo](posicion) de esa lista
+    - quiero los productos [1, 5, 6](posicion)
+    - añade el [tercero](posicion) producto al carrito
+    - quiero el producto [11](posicion) de la lista
+    - dame el [ultimo](posicion) producto
+    - quiero los productos [11 y 12](posicion)
+    - agregame el [primero][{"entity": "posicion"}, {"entity": "posicion"}]
+    - agregame el [segundo][{"entity": "posicion"}, {"entity": "posicion"}] producto
+    - agregame el [primer][{"entity": "posicion"}, {"entity": "posicion"}] producto
+    - agregame el [tercer][{"entity": "posicion"}, {"entity": "posicion"}] producto
+- intent: mostrar_carrito
+  examples: |
+    - Mostrame el carrito.
+    - Quiero ver mi lista de compras.
+    - Ver resumen de compras.
+    - mostrar carrito
+- intent: ver_descuentos
+  examples: |
+    - Tenés descuentos?
+    - Qué descuentos hay?
+    - me das los descuentos de supermercado.
+    - Quiero ver las ofertas.
+    - que promocion hay?
+    - Que promociones tenes?
+    - ver descuentos
+    - quiero ver descuentos
+- intent: session_start
+  examples: |
+    - /start
+    - /sessionStart
+- lookup: posicion
+  examples: |
+    - primero
+    - segundo
+    - tercero
+    - tercer
+    - tercera
+    - cuarto
+    - cuarta
+    - quinto
+    - sexto
+    - septimo
+    - octavo
+    - noveno
+    - decimo
+    - primer
+    - 1
+    - 2
+    - 3
+    - 5
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+- lookup: categoria
+  examples: |
+    - Accesorios Cocina
+    - Aceites
+    - Achuras
+    - Aderezos
+    - Adhesivos y Pegamentos
+    - Agua
+    - Algodón
+    - Alimentos Deshidratados
+    - Alimentos Infantiles
+    - Alimentos para Mascotas
+    - Almacen
+    - Almohadas
+    - Amargos
+    - Aperitivo y Coctel
+    - Arroz
+    - Aves
+    - Bateria de Cocina
+    - Bazar
+    - Bebes y Niños
+    - Bebidas
+    - Bebidas Blancas
+    - Bizcochuelos
+    - Bolsas / Rollos
+    - Bovino
+    - Broches
+    - Budines
+    - Cacao
+    - Carniceria
+    - Cerdo
+    - Cervezas
+    - Colchoneria
+    - Colchones
+    - Coloración
+    - Condimentos
+    - Conservas
+    - Cosmética
+    - Crema de Leche
+    - Cremas y Emulsiones
+    - Cubiertos
+    - Cuidado e Higiene Bucal
+    - Cuidado e Higiene Cabello
+    - Cuidado e Higiene Personal
+    - Depilación
+    - Descartables
+    - Desodorantes
+    - Desodorantes / Desodorizantes
+    - Dulce de Leche
+    - Dulces
+    - Electrodomesticos
+    - Embutidos
+    - Encurtidos
+    - Endulzantes
+    - Esponjas y Trapitos de Acero
+    - Espumantes
+    - Ferreteria
+    - Fiambres y Embutidos
+    - Fijadores / Styling
+    - Fósforos y Encendedores
+    - Frescos
+    - Frutas
+    - Frutas Deshidratadas
+    - Frutas y Verduras
+    - Frutos Secos - Deshidratados
+    - Galletas
+    - Gaseosas
+    - Golosinas
+    - Grasa
+    - Guantes
+    - Harinas
+    - Hoja
+    - Hortaliza Liviana
+    - Hortaliza Pesada
+    - Huevos
+    - Iluminación
+    - Insecticidas y Repelentes
+    - Jugos
+    - Lavavajillas
+    - Leche en Polvo
+    - Leches
+    - Legumbres Secas
+    - Levadura
+    - Licores
+    - Limpieza Hogar y Pequeñas Superf.
+    - Limp. Pisos y Grandes Superf.
+    - Limpiadores Rústicos
+    - Limpieza
+    - Limpieza de Ropa
+    - Linea Automotor
+    - Línea de Afeitar
+    - Manteca
+    - Margarina
+    - Mate
+    - Mermeladas y Jaleas
+    - Milanesas
+    - Otros de Ferretería
+    - Ovino
+    - Panes Envasados
+    - Panificacion
+    - Pañales
+    - Papel Higiénico
+    - Pastas Frescas
+    - Pastas Secas
+    - Pequeños Electrodomesticos
+    - Perfumeria
+    - Perfumes y Colonias
+    - Pilas y Baterías
+    - Plasticos Hermeticos
+    - Postres
+    - Pre Pizzas y Pizzetas
+    - Premezclas
+    - Procesados
+    - Prod. para Calzados y Cueros
+    - Protección Femenina
+    - Quesos
+    - Rapiditas
+    - Rebozadores y Pan Rallado
+    - Repostería
+    - Ricotta
+    - Salchichas
+    - Salsas
+    - Servilletas y Rollos
+    - Snack
+    - Sommier
+    - Sopas y Caldos
+    - Talcos
+    - Tapas y Discos
+    - Trapos y Paños de Limpieza
+    - Utensillos
+    - Velas
+    - Vidrio Cocina Accesorios
+    - Vinos
+    - Yerbas
+    - Yogures

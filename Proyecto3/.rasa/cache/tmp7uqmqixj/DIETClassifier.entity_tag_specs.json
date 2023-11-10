@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-categoria",
+      "2": "I-categoria",
+      "3": "L-categoria",
+      "4": "U-categoria",
+      "5": "B-marca",
+      "6": "I-marca",
+      "7": "L-marca",
+      "8": "U-marca",
+      "9": "B-posicion",
+      "10": "I-posicion",
+      "11": "L-posicion",
+      "12": "U-posicion",
+      "13": "B-prod_carrito",
+      "14": "I-prod_carrito",
+      "15": "L-prod_carrito",
+      "16": "U-prod_carrito",
+      "17": "B-producto",
+      "18": "I-producto",
+      "19": "L-producto",
+      "20": "U-producto",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-categoria": 1,
+      "I-categoria": 2,
+      "L-categoria": 3,
+      "U-categoria": 4,
+      "B-marca": 5,
+      "I-marca": 6,
+      "L-marca": 7,
+      "U-marca": 8,
+      "B-posicion": 9,
+      "I-posicion": 10,
+      "L-posicion": 11,
+      "U-posicion": 12,
+      "B-prod_carrito": 13,
+      "I-prod_carrito": 14,
+      "L-prod_carrito": 15,
+      "U-prod_carrito": 16,
+      "B-producto": 17,
+      "I-producto": 18,
+      "L-producto": 19,
+      "U-producto": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
